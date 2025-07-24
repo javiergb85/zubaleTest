@@ -71,7 +71,7 @@ This project is an example mobile application developed with **Expo and React Na
 ## 🏗️ Clean Architecture Structure
 
 The project is organized into the following main layers:
-
+```
 src/
 ├── core/             # General utilities and abstractions (Failures, Either)
 │   ├── failures/
@@ -87,7 +87,7 @@ src/
     ├── components/   # Reusable UI components (e.g., PostCard)
     ├── screens/      # Main screen components (e.g., FeedScreen)
     └── stores/       # Zustand stores for UI state management
-
+```
 ## 🛠️ Installation and Usage
 
 Follow these steps to set up the project on your local machine:
