@@ -1,15 +1,15 @@
 import React, { useCallback, useEffect } from 'react';
 import {
-    ActivityIndicator,
-    Button,
-    FlatList,
-    Image,
-    RefreshControl,
-    SafeAreaView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View
+  ActivityIndicator,
+  Button,
+  FlatList,
+  Image,
+  RefreshControl,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from 'react-native';
 import PostCard from '../components/PostCard';
 import { usePostStore } from '../stores/post_store';
@@ -86,7 +86,7 @@ const FeedScreen: React.FC = () => {
     return (
       <View style={styles.centered}>
         <Text style={styles.errorText}>Error: {error.message}</Text>
-        <Button title="Reintentar" onPress={handleInitialLoadOrRefresh} />
+        <Button title="Retry" onPress={handleInitialLoadOrRefresh} />
       </View>
     );
   }

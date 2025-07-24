@@ -24,7 +24,7 @@ This project is an example mobile application developed with **Expo and React Na
 * **React Native:** For native user interface development.
 * **Zustand:** Lightweight and flexible state management library.
 * **Moment.js:** For date parsing and formatting.
-* **`@expo/vector-icons` (Ionicons):** For UI icons.
+* **`@expo/vector-icons` (Ionicons, Feather):** For UI icons.
 * **TypeScript:** For more robust development with static typing.
 * **Fetch API:** For making HTTP requests to the API.
 
@@ -62,7 +62,7 @@ This project is an example mobile application developed with **Expo and React Na
 * **React Native:** For native user interface development.
 * **Zustand:** Lightweight and flexible state management library.
 * **Moment.js:** For date parsing and formatting.
-* **`@expo/vector-icons` (Ionicons):** For UI icons.
+* **`@expo/vector-icons` (Ionicons, Feather):** For UI icons.
 * **TypeScript:** For more robust development with static typing.
 * **Fetch API:** For making HTTP requests to the API.
 
