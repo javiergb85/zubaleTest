@@ -84,11 +84,9 @@ src/
 │   ├── repositories/ # Abstract interfaces for data interaction
 │   └── use_cases/    # Specific business logic (e.g., GetPostsUseCase)
 └── presentation/     # UI layer and state management
-├── components/   # Reusable UI components (e.g., PostCard)
-├── screens/      # Main screen components (e.g., FeedScreen)
-└── stores/       # Zustand stores for UI state management
-
----
+    ├── components/   # Reusable UI components (e.g., PostCard)
+    ├── screens/      # Main screen components (e.g., FeedScreen)
+    └── stores/       # Zustand stores for UI state management
 
 ## 🛠️ Installation and Usage
 
