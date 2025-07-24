@@ -1,50 +1,169 @@
-# Welcome to your Expo app 👋
+# 📸 Zubale Test Instagram-like Feed App with Expo and Clean Architecture
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is an example mobile application developed with **Expo and React Native**, simulating an Instagram-style post feed. It has been designed following **Clean Architecture** principles to keep the code modular, scalable, and easy to maintain.
 
-## Get started
+---
 
-1. Install dependencies
+## ✨ Features
 
-   ```bash
-   npm install
-   ```
+* **Post Feed:** Displays an infinite scroll list of posts fetched from an API.
+* **Intuitive User Interface:** Instagram-like design with avatars, usernames, images, and an interaction section.
+* **Enhanced Interaction Section:** "Like," "Comments," and "Save" icons, with numerical counters next to the relevant icons for better visibility.
+* **Post Details:** Shows the author's name, description, and formatted creation date.
+* **Pagination and Infinite Loading:** Automatically loads more posts when scrolling down.
+* **Pull-to-Refresh:** Allows updating the feed by pulling down.
+* **State Management with Zustand:** Efficient and centralized application state management.
+* **Date Formatting with Moment.js:** User-friendly presentation of post timestamps.
+* **Clean Architecture:** Modular project structure with well-defined Domain, Data, and Presentation layers.
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🚀 Technologies Used
 
-In the output, you'll find options to open the app in a
+* **Expo:** Framework for building React Native applications.
+* **React Native:** For native user interface development.
+* **Zustand:** Lightweight and flexible state management library.
+* **Moment.js:** For date parsing and formatting.
+* **`@expo/vector-icons` (Ionicons):** For UI icons.
+* **TypeScript:** For more robust development with static typing.
+* **Fetch API:** For making HTTP requests to the API.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🏗️ Clean Architecture Structure
 
-## Get a fresh project
+The project is organized into the following main layers:
 
-When you're ready, run:
+Markdown
 
-```bash
-npm run reset-project
-```
+# 📸 Instagram-like Feed App with Expo and Clean Architecture
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This project is an example mobile application developed with **Expo and React Native**, simulating an Instagram-style post feed. It has been designed following **Clean Architecture** principles to keep the code modular, scalable, and easy to maintain.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## ✨ Features
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* **Post Feed:** Displays an infinite scroll list of posts fetched from an API.
+* **Intuitive User Interface:** Instagram-like design with avatars, usernames, images, and an interaction section.
+* **Enhanced Interaction Section:** "Like," "Comments," and "Save" icons, with numerical counters next to the relevant icons for better visibility.
+* **Post Details:** Shows the author's name, description, and formatted creation date.
+* **Pagination and Infinite Loading:** Automatically loads more posts when scrolling down.
+* **Pull-to-Refresh:** Allows updating the feed by pulling down.
+* **State Management with Zustand:** Efficient and centralized application state management.
+* **Date Formatting with Moment.js:** User-friendly presentation of post timestamps.
+* **Clean Architecture:** Modular project structure with well-defined Domain, Data, and Presentation layers.
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 🚀 Technologies Used
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* **Expo:** Framework for building React Native applications.
+* **React Native:** For native user interface development.
+* **Zustand:** Lightweight and flexible state management library.
+* **Moment.js:** For date parsing and formatting.
+* **`@expo/vector-icons` (Ionicons):** For UI icons.
+* **TypeScript:** For more robust development with static typing.
+* **Fetch API:** For making HTTP requests to the API.
+
+---
+
+## 🏗️ Clean Architecture Structure
+
+The project is organized into the following main layers:
+
+src/
+├── core/             # General utilities and abstractions (Failures, Either)
+│   ├── failures/
+│   └── utils/
+├── data/             # Repository implementations and data sources
+│   ├── datasources/  # Logic for interacting with external APIs (remote)
+│   └── repositories/ # Concrete implementations of repository interfaces
+├── domain/           # The core of the application (technology-agnostic)
+│   ├── entities/     # Definition of data structures (PostEntity)
+│   ├── repositories/ # Abstract interfaces for data interaction
+│   └── use_cases/    # Specific business logic (e.g., GetPostsUseCase)
+└── presentation/     # UI layer and state management
+├── components/   # Reusable UI components (e.g., PostCard)
+├── screens/      # Main screen components (e.g., FeedScreen)
+└── stores/       # Zustand stores for UI state management
+
+---
+
+## 🛠️ Installation and Usage
+
+Follow these steps to set up the project on your local machine:
+
+### Prerequisites
+
+* Node.js (v14 or higher) and npm or yarn installed.
+* Expo CLI installed globally: `npm install -g expo-cli`
+
+### Installation Steps
+
+1.  **Clone the repository:**
+    ```bash
+    git clone git clone git@github.com:javiergb85/zubaleTest.git
+    cd instagram-feed-app
+    ```
+ 
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or if you use yarn
+    # yarn install
+    ```
+
+### Run the Application
+
+1.  **Start the Expo development server:**
+    ```bash
+    npm start
+    # or
+    # expo start
+    ```
+2.  This will open the Expo Developer Tools in your browser. You can then:
+    * Scan the QR code with the **Expo Go** app on your mobile device (iOS or Android).
+    * Select the option to open it in an iOS or Android **emulator/simulator**.
+    * Press `w` to open it in a **web browser** (though the experience won't be native).
+
+---
+
+## ⚙️ API Used
+
+This project consumes a simulated post API to fetch feed data.
+
+* **Base URL:** `https://662029f13bf790e070af2cd8.mockapi.io/api/v1`
+* **Posts Endpoint:** `/posts`
+* **Example Request (with pagination):** `https://662029f13bf790e070af2cd8.mockapi.io/api/v1/posts?page=1&limit=10`
+* **`Post` Object Structure:**
+    ```json
+    {
+      "createdAt": "2024-04-17T02:20:22.340Z",
+      "name": "Jackie Schinner",
+      "avatar": "[https://cloudflare-ipfs.com/ipfs/.../avatar/920.jpg](https://cloudflare-ipfs.com/ipfs/.../avatar/920.jpg)",
+      "description": "fault-tolerant",
+      "likes": 99016,
+      "image": "[https://loremflickr.com/640/480](https://loremflickr.com/640/480)",
+      "comments": 39609,
+      "liked": false,
+      "saved": true,
+      "location": "Bogota",
+      "id": "1"
+    }
+    ```
+
+---
+
+## 🤝 Contributions
+
+Contributions are welcome! If you find a bug or have an improvement, feel free to open an *issue* or submit a *pull request*.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+---
